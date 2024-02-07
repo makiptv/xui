@@ -1,0 +1,23 @@
+---
+version: "3"
+services:
+  xuione:
+    hostname: "xuione"
+    container_name: "xuione"
+    environment:
+      - "PGID=0"
+      - "PUID=0"
+      - "TZ=Europe/Berlin"
+      - "UMASK=022"
+    image: "cyb3rgh05t/xui:latest"
+    restart: "unless-stopped"
+    networks:
+      - "proxy"
+    ports:
+      - "8888:8888"
+    volumes:
+      - "/opt/appdata/xuione:/XUI/crack:rw"
+networks:
+  proxy:
+    driver: bridge
+    external: true
