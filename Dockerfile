@@ -1,3 +1,4 @@
+#XUI ONE CRACKED
 FROM ubuntu:20.04
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y wget unzip python3 lsb-release libfreetype6 sudo
